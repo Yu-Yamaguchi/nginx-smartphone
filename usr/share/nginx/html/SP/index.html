@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="ja">
 <head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
+  <meta charset="utf-8">
+  <title>Welcome to nginx!</title>
+  <style>
+      body {
+          width: 35em;
+          margin: 0 auto;
+          font-family: Tahoma, Verdana, Arial, sans-serif;
+      }
+  </style>
 </head>
 <body>
-<h1>ようこそスマホサイトのTopへ!</h1>
-<span style="font-size:30px;"><a href="./page1.html">ページ１へ</a></span>
-<br><br><br>
-<span><a href="#" id="lnkToPc">PCサイトへ</a></span>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-<script>
-$(function(){
-  $('#lnkToPc').click(function(){
-    $.cookie('siteview', 'pc', { expires: 1, path: '/' });
-    location.href = '/';
+  <h1>ようこそスマホサイトのTopへ!</h1>
+  <span style="font-size:30px;"><a href="./page1.html">ページ１へ</a></span>
+  <br><br><br>
+  <span><a href="#" id="lnkToPc">PCサイトへ</a></span>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+  <script>
+  $(function(){
+    $('#lnkToPc').click(function(){
+      $.cookie('siteview', 'pc', { expires: 1, path: '/' });
+      location.href = '/';
+    });
   });
-});
-</script>
+  </script>
 </body>
 </html>
